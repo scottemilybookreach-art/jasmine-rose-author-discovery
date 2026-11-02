@@ -191,10 +191,10 @@ export function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 export function AnimatedText({ text, start = 0, className = "" }: { text: string; start?: number; className?: string }) {
   let i = 0;
   return (
-    <span className={className} aria-label={text}>
+    <span aria-label={text}>
       {text.split(" ").map((w, wi) => (
         <span key={wi} className="inline-block whitespace-nowrap" aria-hidden="true">
-          {w.split("").map((c, ci) => <span key={ci} className="letter" style={{ animationDelay: `${start + i++ * 28}ms` }}>{c}</span>)}
+          {w.split("").map((c, ci) => <span key={ci} className={`letter ${className}`} style={{ animationDelay: `${start + i++ * 28}ms` }}>{c}</span>)}
           {"\u00a0"}
         </span>
       ))}
