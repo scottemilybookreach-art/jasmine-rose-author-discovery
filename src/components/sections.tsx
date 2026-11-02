@@ -3,9 +3,9 @@ import {
   BookOpen, BookMarked, Eye, MousePointerClick, Users, Star, TrendingUp, Search, Send, Sparkles, Compass, MessageCircleHeart,
   CheckCircle2, UserRound, Zap, ShieldCheck, Gem, Heart, Mail, Plus, ArrowRight, Quote,
 } from "lucide-react";
-import portrait from "@/assets/ebook_picture.png.asset.json";
-import ranking from "@/assets/Delivery_project_2.png.asset.json";
-import emailShot from "@/assets/testimonial.jpeg.asset.json";
+import portrait from "@/assets/portrait.png";
+import ranking from "@/assets/listopia-ranking.png";
+import emailShot from "@/assets/testimonial.jpeg";
 import { AnimatedText, Counter, EMAIL, FloatingBooks, Reveal, SectionTitle } from "./site";
 
 const wrap = "mx-auto max-w-7xl px-5 lg:px-8";
