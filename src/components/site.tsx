@@ -153,7 +153,7 @@ export function Reveal({ children, className = "", delay = 0, zoom = false, as: 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.classList.add("is-visible"); io.disconnect(); } }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+    const io = new IntersectionObserver(([e]) => { if (e?.isIntersecting) { el.classList.add("is-visible"); io.disconnect(); } }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
     io.observe(el);
     return () => io.disconnect();
   }, []);
@@ -172,7 +172,7 @@ export function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(([e]) => {
-      if (!e.isIntersecting) return;
+      if (!e?.isIntersecting) return;
       io.disconnect();
       const start = performance.now(), d = 1800;
       const step = (t: number) => {
