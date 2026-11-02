@@ -3,9 +3,9 @@ import {
   BookOpen, BookMarked, Eye, MousePointerClick, Users, Star, TrendingUp, Search, Send, Sparkles, Compass, MessageCircleHeart,
   CheckCircle2, UserRound, Zap, ShieldCheck, Gem, Heart, Mail, Plus, ArrowRight, Quote,
 } from "lucide-react";
-import portrait from "@/assets/ebook_picture.png.asset.json";
-import ranking from "@/assets/Delivery_project_2.png.asset.json";
-import emailShot from "@/assets/testimonial.jpeg.asset.json";
+import portrait from "@/assets/portrait.png";
+import ranking from "@/assets/listopia-ranking.png";
+import emailShot from "@/assets/testimonial.jpeg";
 import { AnimatedText, Counter, EMAIL, FloatingBooks, Reveal, SectionTitle } from "./site";
 
 const wrap = "mx-auto max-w-7xl px-5 lg:px-8";
@@ -41,7 +41,7 @@ export function Hero() {
           <div className="bg-royal absolute inset-6 rotate-6 rounded-[2.5rem] opacity-90" />
           <div className="bg-gold-grad absolute inset-6 -rotate-3 rounded-[2.5rem] opacity-70" />
           <div className="relative overflow-hidden rounded-[2.5rem] border-4 border-card bg-cream shadow-lux">
-            <img src={portrait.url} alt="Jasmine Rose holding a stack of books" width={600} height={600} className="aspect-square w-full object-cover" fetchPriority="high" />
+            <img src={portrait} alt="Jasmine Rose holding a stack of books" width={600} height={600} className="aspect-square w-full object-cover" fetchPriority="high" />
           </div>
           <div className="glass absolute -bottom-6 -left-4 flex items-center gap-3 rounded-2xl px-5 py-4 shadow-lux sm:-left-10">
             <div className="bg-gold-grad grid h-10 w-10 place-items-center rounded-full"><Star className="h-5 w-5 text-primary-deep" /></div>
@@ -59,7 +59,7 @@ export function About() {
       <div className={`${wrap} grid items-center gap-16 lg:grid-cols-2`}>
         <Reveal zoom className="relative mx-auto w-full max-w-md">
           <div className="absolute -inset-4 rounded-[2.5rem] border-2 border-gold/50" />
-          <img src={portrait.url} alt="Portrait of Jasmine Rose" loading="lazy" width={600} height={600} className="relative aspect-[4/5] w-full rounded-[2rem] bg-cream object-cover object-top shadow-lux" />
+          <img src={portrait} alt="Portrait of Jasmine Rose" loading="lazy" width={600} height={600} className="relative aspect-[4/5] w-full rounded-[2rem] bg-cream object-cover object-top shadow-lux" />
         </Reveal>
         <Reveal>
           <p className="eyebrow">About Me</p>
@@ -199,7 +199,7 @@ export function SuccessStories() {
                 "Excellent, Jasmine.<br />I found a load of Echoes listings!<br /><span className="text-gold-grad italic">Very cool.</span>"
               </blockquote>
               <p className="mt-4 text-sm text-muted-foreground">— Steve Gerkin, author of <em>Echoes of Light</em></p>
-              <img src={emailShot.url} alt="Email from author Steve Gerkin thanking Jasmine for the Echoes listings" loading="lazy" className="mt-6 w-full rounded-2xl border shadow-soft transition duration-700 hover:scale-[1.02]" />
+              <img src={emailShot} alt="Email from author Steve Gerkin thanking Jasmine for the Echoes listings" loading="lazy" className="mt-6 w-full rounded-2xl border shadow-soft transition duration-700 hover:scale-[1.02]" />
             </div>
           </Reveal>
           <Reveal delay={150} className="card-lux overflow-hidden">
@@ -209,7 +209,7 @@ export function SuccessStories() {
             <div className="p-7">
               <p className="font-display text-3xl text-primary"><em>Echoes of Light</em> ranked <span className="text-gold-grad font-semibold">#42</span> — alongside bestsellers</p>
               <p className="mt-3 text-muted-foreground">Listed beside titles like <em>Range</em>, <em>Pivot</em> and <em>Just Mercy</em> with a perfect 5.00 rating.</p>
-              <img src={ranking.url} alt="Goodreads Listopia ranking showing Echoes of Light at position 42" loading="lazy" className="mt-6 w-full rounded-2xl border shadow-soft transition duration-700 hover:scale-[1.02]" />
+              <img src={ranking} alt="Goodreads Listopia ranking showing Echoes of Light at position 42" loading="lazy" className="mt-6 w-full rounded-2xl border shadow-soft transition duration-700 hover:scale-[1.02]" />
             </div>
           </Reveal>
         </div>
